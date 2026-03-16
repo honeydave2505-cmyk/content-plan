@@ -57,32 +57,108 @@ src/
     └── index.ts                 # TypeScript type definitions
 ```
 
-## Getting Started
+## Prerequisites
+
+Before running this project you need **Node.js** installed on your machine.
+
+| Requirement | Minimum version | Check with |
+|-------------|----------------|------------|
+| Node.js     | 18.17 or later | `node --version` |
+| npm         | 9 or later     | `npm --version` |
+
+> **Don't have Node.js?** Download it from [nodejs.org](https://nodejs.org/) (the LTS version is recommended).
+
+## How to Run (Step-by-Step)
+
+### 1. Clone the repository
 
 ```bash
-# Install dependencies
+git clone https://github.com/honeydave2505-cmyk/content-plan.git
+cd content-plan
+```
+
+### 2. Install dependencies
+
+```bash
 npm install
+```
 
-# Run the development server
+This downloads all the packages the app needs (Next.js, React, Tailwind CSS, etc.) into a `node_modules` folder. It only needs to be done once (or again after `package.json` changes).
+
+### 3. Start the development server
+
+```bash
 npm run dev
+```
 
-# Build for production
+You will see output like:
+
+```
+▲ Next.js 16.x.x
+- Local:   http://localhost:3000
+```
+
+### 4. Open the app in your browser
+
+Go to **[http://localhost:3000](http://localhost:3000)** — you should see the ContentAI home page.
+
+### 5. Explore the app
+
+Use the **sidebar** on the left to navigate between pages:
+
+| Sidebar link | What it does |
+|---|---|
+| **Dashboard** | View stats, quick actions, and recent activity |
+| **Select Niche** | Pick a content niche (Fitness, Food, Travel, etc.) |
+| **Generate Content** | Upload an image → choose niche/platform/tone → click **Generate** |
+| **Content Calendar** | See your weekly content schedule |
+| **Content Library** | Browse and filter all saved content |
+| **Settings** | Configure AI provider, defaults, timezone |
+
+### 6. Stop the server
+
+Press **Ctrl + C** in the terminal to stop the development server.
+
+## Available npm Scripts
+
+| Command | What it does |
+|---------|-------------|
+| `npm run dev` | Starts the app in **development mode** with hot-reload (changes update instantly) |
+| `npm run build` | Creates an optimized **production build** in the `.next` folder |
+| `npm start` | Runs the production build (must run `npm run build` first) |
+| `npm run lint` | Checks code for style and quality issues using ESLint |
+
+## Building for Production
+
+```bash
+# 1. Create the production build
 npm run build
 
-# Start production server
+# 2. Start the production server
 npm start
 ```
 
-Open [http://localhost:3000](http://localhost:3000) to view the application.
+The production server also runs on [http://localhost:3000](http://localhost:3000) by default.
 
 ## AI Integration
 
-The app ships with a built-in template engine for demo purposes. To enable real AI content generation:
+The app ships with a built-in **template engine** for demo purposes — no API key is required to try it out. The "Generate Content" page works immediately.
+
+To connect a real AI provider for smarter content generation:
 
 1. Go to **Settings** → **AI Configuration**
-2. Select your AI provider
+2. Select your AI provider (OpenAI, Google Gemini, or Anthropic Claude)
 3. Enter your API key
 4. The `/api/generate` endpoint will use your configured provider
+
+## Troubleshooting
+
+| Problem | Solution |
+|---------|----------|
+| `command not found: node` | Install Node.js from [nodejs.org](https://nodejs.org/) |
+| `npm install` fails | Delete `node_modules` and `package-lock.json`, then run `npm install` again |
+| Port 3000 is already in use | Run `npm run dev -- -p 3001` to use a different port |
+| Page shows an error after pulling new code | Run `npm install` again to pick up any new dependencies |
 
 ## Pages Overview
 
