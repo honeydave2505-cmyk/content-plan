@@ -55,7 +55,7 @@ export default function DashboardPage() {
           </h3>
           <ul className="mt-4 divide-y divide-gray-100 dark:divide-gray-700">
             {[
-              { text: "Published \u201cFitness Motivation Monday\u201d on Instagram", time: "2 hours ago" },
+              { text: 'Published "Fitness Motivation Monday" on Instagram', time: "2 hours ago" },
               { text: "Scheduled 3 posts for this week", time: "5 hours ago" },
               { text: "Generated new food content from uploaded image", time: "1 day ago" },
               { text: "Changed niche to Travel & Adventure", time: "2 days ago" },
