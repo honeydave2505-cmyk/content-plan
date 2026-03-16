@@ -1,0 +1,68 @@
+import type { ContentItem } from "@/components/ContentCard";
+
+export const sampleContent: ContentItem[] = [
+  {
+    id: "1",
+    title: "10 Tips for Better Social Media Engagement",
+    platform: "Instagram",
+    status: "published",
+    date: "2026-03-10",
+    category: "Marketing",
+  },
+  {
+    id: "2",
+    title: "How to Build a Personal Brand in 2026",
+    platform: "LinkedIn",
+    status: "scheduled",
+    date: "2026-03-18",
+    category: "Education",
+  },
+  {
+    id: "3",
+    title: "Weekly Product Update Thread",
+    platform: "Twitter",
+    status: "draft",
+    date: "2026-03-20",
+    category: "News",
+  },
+  {
+    id: "4",
+    title: "Complete Guide to Content Marketing",
+    platform: "Blog",
+    status: "scheduled",
+    date: "2026-03-22",
+    category: "Tutorial",
+  },
+  {
+    id: "5",
+    title: "Behind the Scenes: Our Creative Process",
+    platform: "Instagram",
+    status: "draft",
+    date: "2026-03-15",
+    category: "Entertainment",
+  },
+  {
+    id: "6",
+    title: "Top 5 Tools Every Content Creator Needs",
+    platform: "Blog",
+    status: "published",
+    date: "2026-03-08",
+    category: "Review",
+  },
+  {
+    id: "7",
+    title: "AI in Content Creation: What You Need to Know",
+    platform: "LinkedIn",
+    status: "scheduled",
+    date: "2026-03-25",
+    category: "Education",
+  },
+  {
+    id: "8",
+    title: "Monthly Analytics Report Discussion",
+    platform: "Twitter",
+    status: "draft",
+    date: "2026-03-28",
+    category: "Marketing",
+  },
+];
